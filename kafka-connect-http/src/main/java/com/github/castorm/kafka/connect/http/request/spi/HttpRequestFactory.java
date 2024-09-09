@@ -24,6 +24,7 @@ import com.github.castorm.kafka.connect.http.model.HttpRequest;
 import com.github.castorm.kafka.connect.http.model.Offset;
 import org.apache.kafka.common.Configurable;
 
+import java.net.MalformedURLException;
 import java.util.Map;
 
 @FunctionalInterface

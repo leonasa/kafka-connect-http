@@ -45,6 +45,7 @@ import static org.apache.kafka.common.config.ConfigDef.Type.STRING;
 public class JacksonRecordParserConfig extends AbstractConfig {
 
     private static final String LIST_POINTER = "http.response.list.pointer";
+    private static final String COUNT_POINTER = "http.response.count.pointer";
     private static final String ITEM_POINTER = "http.response.record.pointer";
     private static final String ITEM_KEY_POINTER = "http.response.record.key.pointer";
     private static final String ITEM_TIMESTAMP_POINTER = "http.response.record.timestamp.pointer";
@@ -70,6 +71,7 @@ public class JacksonRecordParserConfig extends AbstractConfig {
     public static ConfigDef config() {
         return new ConfigDef()
                 .define(LIST_POINTER, STRING, "/", HIGH, "Item List JsonPointer")
+                .define(COUNT_POINTER, STRING, "/", HIGH, "List Count JsonPointer")
                 .define(ITEM_POINTER, STRING, "/", HIGH, "Item JsonPointer")
                 .define(ITEM_KEY_POINTER, STRING, null, HIGH, "Item Key JsonPointers")
                 .define(ITEM_TIMESTAMP_POINTER, STRING, null, MEDIUM, "Item Timestamp JsonPointer")
